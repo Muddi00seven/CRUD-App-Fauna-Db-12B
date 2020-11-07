@@ -23,21 +23,21 @@ const useStyle = makeStyles(theme => ({
     },
   },
   container: {
-    background: "#2d3748",
+    background: "#ffffff",
     width: "100%",
     maxWidth: "600px",
     padding: "30px",
     borderRadius: "8px",
   },
   mainHeader: {
-    color: "white",
+    color: "#4d4d4d",
   },
   TextField: {
     width: "100%",
     color: "#cbd5e0",
   },
   conetentContainer: {
-    background: "#1a202c",
+    background: "#ffffff",
     margin: "3px 0",
     borderRadius: "4px",
   },
@@ -126,7 +126,7 @@ export default function Home() {
             variant="h2"
             className={classes.mainHeader}
           >
-            Serverless CRUD
+            FAUNA DB CRUD
           </Typography>
         </Box>
         <Formik
@@ -244,7 +244,7 @@ export default function Home() {
                         style={{ margin: "0 4px 0 0px " }}
                         variant="contained"
                         color={"primary"}
-                        size="small"
+                        size="big"
                         onClick={() => handleUpdate(msg.ref["@ref"].id)}
                       >
                         Edit
@@ -253,7 +253,7 @@ export default function Home() {
                         variant="contained"
                         color={"secondary"}
                         onClick={() => handleDelete(msg.ref["@ref"].id)}
-                        size="small"
+                        size="big"
                         disabled={isDeleting ? true : false}
                         style={{ color: "white" }}
                       >
