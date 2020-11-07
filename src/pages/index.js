@@ -141,7 +141,7 @@ export default function Home() {
           onSubmit={(values, actions) => {
             if (!isUpdating) {
               setIsLoading(true)
-              fetch(`/.netlify/functions/todos-create`, {
+              fetch("/.netlify/functions/todos-create", {
                 method: "post",
                 body: JSON.stringify(values),
               })
@@ -161,7 +161,7 @@ export default function Home() {
                 })
             } else {
               setIsLoading(true)
-              fetch(`/.netlify/functions/todos-update`, {
+              fetch("/.netlify/functions/todos-update", {
                 method: "put",
                 body: JSON.stringify(values),
               })
