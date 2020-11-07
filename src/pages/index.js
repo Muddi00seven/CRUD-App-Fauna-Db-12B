@@ -25,16 +25,17 @@ const useStyle = makeStyles(theme => ({
   container: {
     background: "#ffffff",
     width: "100%",
-    maxWidth: "600px",
+    maxWidth: "1000px",
     padding: "30px",
     borderRadius: "8px",
   },
   mainHeader: {
     color: "#4d4d4d",
+    fontFamily: '"Comic Sans MS", cursive, sans-serif'
   },
   TextField: {
     width: "100%",
-    color: "#cbd5e0",
+    color: "#4d4d4d",
   },
   conetentContainer: {
     background: "#ffffff",
@@ -42,7 +43,8 @@ const useStyle = makeStyles(theme => ({
     borderRadius: "4px",
   },
   content: {
-    color: "#a0aec0",
+    color: "#4d4d4d",
+    fontSize: '30px'
   },
   loader: {
     width: "100%",
@@ -235,13 +237,13 @@ export default function Home() {
                     className={classes.conetentContainer}
                     key={msg.ref["@ref"].id}
                   >
-                    <Box py={2} px={3}>
+                    <Box py={2} px={3} >
                       <Typography className={classes.content}>
                         {msg.data.message}
                       </Typography>
-                      <Box p={1}></Box>
+                      {/* <Box p={1}></Box> */}
                       <Button
-                        style={{ margin: "0 4px 0 0px " }}
+                        style={{ margin: "0 4px 0 0px ", width: '180px' }}
                         variant="contained"
                         color={"primary"}
                         size="big"
@@ -255,10 +257,9 @@ export default function Home() {
                         onClick={() => handleDelete(msg.ref["@ref"].id)}
                         size="big"
                         disabled={isDeleting ? true : false}
-                        style={{ color: "white" }}
+                        style={{ color: "white", left: '62%', width: '180px' }}
                       >
-                        {/* {isDeleting && msg.ref["@ref"].id ? "Deleting..." : "Delete"} */}
-                      Delete
+                        Delete
                     </Button>
                     </Box>
                   </div>
